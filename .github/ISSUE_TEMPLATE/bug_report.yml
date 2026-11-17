@@ -1,0 +1,39 @@
+name: Bug report
+description: Something in crossplot doesn't work as it should.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+      placeholder: Brushing the histogram doesn't update the count display; I expected it to drop to the selected rows.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The smallest setup that shows it. A link to a repo, StackBlitz or gist is best.
+      placeholder: |
+        1. Create a dashboard with ...
+        2. Brush ...
+        3. See ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: crossplot version or commit
+      placeholder: "@crossplot/core 0.1.0, or main @ abc1234"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser / runtime
+      placeholder: Chrome 131 on macOS, Node 22
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console output or errors
+      render: shell
